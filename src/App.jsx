@@ -9,7 +9,7 @@ import HeroPage from './HeroPage'
 import Aboutme from './Aboutme'
 import Projects from './Projects'
 import ContactPage from './ContactPage'
-import emailjs from 'emailjs/browser'
+import emailjs from '@emailjs/browser'
 import './App.css'
 
 
