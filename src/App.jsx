@@ -11,7 +11,7 @@ import Projects from './Projects'
 import ContactPage from './ContactPage'
 import emailjs from 'emailjs-com'
 import './App.css'
-import { set } from 'mongoose'
+
 
 function App() {
   
