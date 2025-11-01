@@ -8,7 +8,7 @@ export default function HeroPage ({slideChildContainer}) {
 return (<>
 
 
-<div variants = {slideChildContainer} className="grid grid-rows-1 [grid-template-areas:'video'] will-change-transform will-change-opacity justify-center mb-15" >
+<div variants = {slideChildContainer} className="grid grid-rows-1 [grid-template-areas:'video'] will-change-transform will-change-opacity justify-center mb-10" >
 <video variants = {slideChildContainer} playsInline muted autoPlay loop disablePictureInPicture preload="auto" controls={false} src= {video} className='w-full [grid-area:video] h-auto object-cover
  will-change-transform will-change-opacity' >
 </video>
@@ -68,6 +68,7 @@ rounded-2xl bg-clip-padding p-0.5 bg-gradient-to-tr from-gray-950 to bg-orange-4
 </>)
 
 }
+
 
 
 
