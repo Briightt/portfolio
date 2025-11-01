@@ -21,10 +21,10 @@ className='[grid-area:video] z-[1] flex flex-col lg:flex-row flex-1 items-center
 <motion.div className='flex sm:mb-5 gap-4' variants = {slideChildContainer}>
   <motion.button whileHover={{scale:1.1}}
    className='text-[#ffffff] border-2 border-orange-300 rounded-2xl p-1 sm:p-2 md:min-w-33 transition-colors duration-200
-    hover:bg-orange-300 cursor-pointer active:bg-orange-950 min-w-18 h-8 sm:text-base text-[0.8rem] sm:min-h-10 sm:min-w-30'>Projects</motion.button>
+    hover:bg-orange-300 cursor-pointer active:bg-orange-950 min-w-18 h-8 sm:text-base text-[0.8rem] sm:min-h-10 sm:min-w-30 flex items-center justify-center'>Projects</motion.button>
   <motion.button whileHover={{scale:1.1}}
    className='text-white border-2 border-amber-600 rounded-2xl sm:p-2 sm:min-w-30 
-   transition-colors duration-200 hover:bg-orange-800 active:bg-orange-950 cursor-pointer min-w-18 h-8 sm:min-h-10 sm:text-base text-[0.8rem] p-1'>
+   transition-colors duration-200 hover:bg-orange-800 active:bg-orange-950 cursor-pointer min-w-18 h-8 sm:min-h-10 sm:text-base text-[0.8rem] p-1 flex items-center justify-center'>
     Contact</motion.button>
 </motion.div>
 <motion.div variants = {slideChildContainer} className='flex flex-row gap-5 mt-3'>
@@ -66,4 +66,5 @@ rounded-2xl bg-clip-padding p-0.5 bg-gradient-to-tr from-gray-950 to bg-orange-4
 
 
 </>)
+
 }
