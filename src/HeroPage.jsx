@@ -8,7 +8,7 @@ export default function HeroPage ({slideChildContainer}) {
 return (<>
 
 
-<motion.div className="grid grid-rows-1 [grid-template-areas:'video'] will-change-transform will-change-opacity justify-center mb-15" >
+<div className="grid grid-rows-1 [grid-template-areas:'video'] will-change-transform will-change-opacity justify-center mb-15" >
 <video playsInline muted autoPlay loop disablePictureInPicture controls={false} src= {video} className='w-full [grid-area:video] h-auto object-cover
  ' >
 </video>
@@ -51,7 +51,7 @@ rounded-2xl bg-clip-padding p-0.5 bg-gradient-to-tr from-gray-950 to bg-orange-4
 </motion.img>
 </motion.div>
 </motion.div>
-</motion.div>
+</div>
 
 
 
@@ -68,3 +68,4 @@ rounded-2xl bg-clip-padding p-0.5 bg-gradient-to-tr from-gray-950 to bg-orange-4
 </>)
 
 }
+
