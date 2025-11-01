@@ -31,7 +31,7 @@ useEffect(() => {
   })
 
    const {ref:ProjectsRef, inView:projectsView} = useInView({
-    threshold:0.27,triggerOnce: true
+    threshold:0.26,triggerOnce: true
   })
 
     const {ref:contactRef, inView:contactView} = useInView({
