@@ -114,15 +114,15 @@ const {name,email,message} = field
 
   return (
     <>
-<motion.header className="sticky top-0 left-0 z-[1000] bg-[#141313] p-3">
+<motion.header className="sticky top-0 z-[1000] bg-[#141313] p-3 w-full">
   <motion.nav
     ref={fadeRef}
     variants={fadeParentContainer}
     initial="hidden"
     animate={fadeView ? "show" : "hidden"}
-    className="flex flex-wrap justify-around items-center mx-auto"
+    className="flex justify-center items-center w-full md:justify-evenly sm:ml-0 mx-auto flex-wrap gap-5"
   >
-    <div className="flex flex-wrap justify-center items-center gap-4 text-[#ffa500] font-semibold text-sm sm:text-base md:text-1xl">
+    <div className="flex justify-center items-center gap-4 text-[#ffa500] font-semibold text-sm md:text-base">
       {["Home", "AboutMe", "Projects", "Contact"].map((section) => (
         <motion.span
           key={section}
@@ -143,7 +143,7 @@ const {name,email,message} = field
       ))}
     </div>
 
-    <div className="flex gap-3 sm:gap-5 justify-center items-center mt-3 sm:mt-0">
+    <div className="flex gap-3 sm:gap-5 justify-center items-center sm:mt-0">
       {[github, linkedin, twitter].map((icon, i) => (
         <motion.img
           key={i}
@@ -164,7 +164,7 @@ const {name,email,message} = field
 </Element>
 
 
- <div className='bg-gradient-to-t from-[#1f1f1f] to-[rgb(8, 8, 8)] p-1'>
+ <div className='bg-gradient-to-t from-[#1f1f1f] to-[rgb(8, 8, 8)] p-1 w-full'>
   <Element name ='AboutMe'>
 <motion.div variants = {slideParentContainer} ref ={AboutMeRef} initial = 'hidden' animate = {AboutMeView ? 'show' : 'hidden'}>
   <Aboutme slideChildContainer={slideChildContainer}/>
