@@ -8,10 +8,10 @@ export default function HeroPage ({slideChildContainer}) {
 return (<>
 
 
-<div className="grid grid-rows-1 [grid-template-areas:'video'] will-change-transform will-change-opacity justify-center mb-15" >
-<video playsInline muted autoPlay loop disablePictureInPicture controls={false} src= {video} className='w-full [grid-area:video] h-auto object-cover
+<motion.div variants = {slideChildContainer} className="grid grid-rows-1 [grid-template-areas:'video'] will-change-transform will-change-opacity justify-center mb-15" >
+<motion.video variants = {slideChildContainer} playsInline muted autoPlay loop disablePictureInPicture controls={false} src= {video} className='w-full [grid-area:video] h-auto object-cover
  ' >
-</video>
+</motion.video>
 <motion.div variants = {slideChildContainer} 
 className='[grid-area:video] z-[1] flex flex-col lg:flex-row flex-1 items-center justify-center lg:justify-evenly font-medium leading-snug p-3 lg:gap-15'>
 <motion.div variants = {slideChildContainer} className='flex flex-col gap-2 flex-wrap items-center lg:items-start'>
@@ -68,4 +68,5 @@ rounded-2xl bg-clip-padding p-0.5 bg-gradient-to-tr from-gray-950 to bg-orange-4
 </>)
 
 }
+
 
