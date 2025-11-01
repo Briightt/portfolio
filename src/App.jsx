@@ -31,7 +31,7 @@ useEffect(() => {
   })
 
    const {ref:ProjectsRef, inView:projectsView} = useInView({
-    threshold:0.29,triggerOnce: true
+    threshold:0.27,triggerOnce: true
   })
 
     const {ref:contactRef, inView:contactView} = useInView({
@@ -48,12 +48,12 @@ useEffect(() => {
 
   const fadeParentContainer = {
     hidden: {opacity:0},
-    show:{opacity:1, transition:{staggerChildren:0.3, ease:'easeInOut'}}
+    show:{opacity:1, transition:{staggerChildren:0.4, ease:'easeInOut'}}
   }
 
     const fadeChildContainer = {
     hidden: {opacity:0},
-    show:{opacity:1, transition:{duration:1}, ease:'easeInOut'}
+    show:{opacity:1, transition:{duration:0.7}, ease:'easeInOut'}
   }
 
     const slideParentContainer = {
