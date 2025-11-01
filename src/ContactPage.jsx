@@ -8,7 +8,7 @@ return (<>
 <motion.div className='flex flex-col md:flex-row justify-center gap-10 items-center md:items-start p-5  border-[#ffffff4d] bg-gradient-to-t from-[#ffad161f] 
 to-[rgb(8, 8, 8)] mt-20 will-change-transform will-change-opacity w-full overflow-auto'
  variants = {slideChildContainer}>
-<motion.div className='flex flex-col justify-center gap-5 p-5 border-1 border-[#807e7e65] rounded-2xl text-white min-h-62' variants = {slideChildContainer} whileHover={{scale:1.05, translateY:-20}}>
+<motion.div className='flex flex-col justify-center gap-5 p-5 border-1 border-[#807e7e65] rounded-2xl text-white min-h-62' variants = {slideChildContainer} whileHover={{scale:1.05, translateY:-10}}>
  <h1 className=' text-[1.7rem] font-bold bg-clip-text bg-gradient-to-r text-transparent from-orange-400 to-red-400 border-b-1 border-b-[#ffffff4f] w-full' variants = {slideChildContainer} >Contact Details</h1>
 <p className='text-[1.2rem] flex items-center gap-2 ' variants = {slideChildContainer} ><MdMail className='text-white'/>Email</p><span className='font-light text-[#a09f9f] text-[1.1rem] leading-0'>Mustafaabdulkareem16@gmail.com</span>
 <p className='text-[1.2rem] flex items-center gap-2 mt-3' variants = {slideChildContainer} ><MdPhone className='text-white'/>Phone</p><span className='font-light text-[#a09f9f] text-[1.1rem] leading-1'>+971503181776</span>
@@ -39,6 +39,7 @@ disabled = {formDisabled()}>Submit</button>
 
 
 </>)
+
 
 
 
