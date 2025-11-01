@@ -36,7 +36,7 @@ export default function Aboutme ({slideChildContainer}) {
 
   return (<>
 <motion.div className='flex flex-1 flex-col md:flex-row text-white justify-center items-center mt-12 sm:justify-evenly will-change-transform will-change-opacity w-full' >
-<motion.div className='flex flex-col gap-7 w-full max-w-[720px] leading-14 flex-wrap items-center justify-center md:items-start' variants = {slideChildContainer}>
+<motion.div className='flex flex-col gap-7 w-full max-w-[715px] leading-14 flex-wrap items-center justify-center md:items-start' variants = {slideChildContainer}>
 <h1 className='text-[2.5rem] sm:text-6xl mb-4 font-bold bg-clip-text bg-gradient-to-t text-transparent from-orange-400 to-red-400' > About me</h1>
 <p className='text-[#ffffffa8] text-[1.2rem] font-light' ><span className='text-white text-[1.5rem]' >My name is Mustafa Abdul Kareem </span>, 
   <span className='text-orange-400 underline-offset-2 decoration-1 underline mr-1' >I'm 24.{age} </span>
@@ -69,4 +69,5 @@ variants = {slideChildContainer}>{hoverIndex === index && languages[index]}</mot
 </>)
 
 }
+
 
