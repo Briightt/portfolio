@@ -51,7 +51,7 @@ rounded-2xl bg-clip-padding p-0.5 bg-gradient-to-tr from-gray-950 to bg-orange-4
 </motion.img>
 </motion.div>
 </motion.div>
-</div>
+</motion.div>
 
 
 
@@ -68,5 +68,6 @@ rounded-2xl bg-clip-padding p-0.5 bg-gradient-to-tr from-gray-950 to bg-orange-4
 </>)
 
 }
+
 
 
