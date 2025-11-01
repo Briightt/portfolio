@@ -39,7 +39,7 @@ className='[grid-area:video] z-[1] flex flex-col lg:flex-row flex-1 items-center
 <span  className='text-white xl:text-base sm:text-[0.9rem] text-[0.61rem]'>Projects</span></motion.p>
 <motion.p whileHover = {{translateY:-10}} transition={{duration:0.1, ease: 'easeInOut'}}
  className='bg-[#ffffff33] flex items-center justify-center flex-col rounded-2xl xl:w-70 xl:h-20 sm:w-60 sm:h-15 text-[#ffa500] 
-  flex-1 flex-wrap sm:whitespace-nowrap min-w-36 h-10'>
+  flex-1 flex-wrap sm:whitespace-nowrap min-w-38 h-10'>
   <span  className='xl:text-[1.8rem] sm:text-[1.3rem] text-[0.9rem] font-bold'>2+</span>
   <span  className='text-white xl:text-base sm:text-[0.8rem] text-[0.55rem]'>Months of Experience with React</span></motion.p>
 
@@ -68,6 +68,7 @@ rounded-2xl bg-clip-padding p-0.5 bg-gradient-to-tr from-gray-950 to bg-orange-4
 </>)
 
 }
+
 
 
 
