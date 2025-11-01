@@ -15,9 +15,9 @@ return (<>
 <motion.div variants = {slideChildContainer} 
 className='[grid-area:video] z-[1] flex flex-col lg:flex-row flex-1 items-center justify-center lg:justify-evenly font-medium leading-snug p-3 lg:gap-15'>
 <motion.div variants = {slideChildContainer} className='flex flex-col gap-2 flex-wrap items-center lg:items-start'>
-<h1 variants = {slideChildContainer}className='text-2xl sm:text-[3rem] lg:text-[4.2rem xl:text-[5rem] bg-gradient-to-bl from-[#ffa500] to-[#f80000]
+<h1 variants = {slideChildContainer}className='text-2xl sm:text-[2.5rem] lg:text-[4.2rem xl:text-[5rem] bg-gradient-to-bl from-[#ffa500] to-[#f80000]
  text-transparent bg-clip-text whitespace-nowrap'>Mustafa Abdul Kareem</h1>
-<h1 className='text-xl sm:text-[2rem] md:text-[1.5rem] lg:text-[2.5rem] xl:text-[3rem] text-[#ffffff] mb-2 sm:mb-5'variants = {slideChildContainer}>Front-End Web Developer Student</h1>
+<h1 className='text-[0.9rem] sm:text-base md:text-[1.5rem] lg:text-[2rem] xl:text-[3rem] text-[#ffffff] mb-2 sm:mb-5'variants = {slideChildContainer}>Front-End Web Developer Student</h1>
 <motion.div className='flex sm:mb-5 gap-4' variants = {slideChildContainer}>
   <motion.button whileHover={{scale:1.1}}
    className='text-[#ffffff] border-2 border-orange-300 rounded-2xl p-1 sm:p-2 md:min-w-33 transition-colors duration-200
@@ -68,6 +68,7 @@ rounded-2xl bg-clip-padding p-0.5 bg-gradient-to-tr from-gray-950 to bg-orange-4
 </>)
 
 }
+
 
 
 
