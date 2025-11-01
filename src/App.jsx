@@ -31,7 +31,7 @@ useEffect(() => {
   })
 
    const {ref:ProjectsRef, inView:projectsView} = useInView({
-    threshold:0.33,triggerOnce: true
+    threshold:0.30,triggerOnce: true
   })
 
     const {ref:contactRef, inView:contactView} = useInView({
@@ -48,7 +48,7 @@ useEffect(() => {
 
   const fadeParentContainer = {
     hidden: {opacity:0},
-    show:{opacity:1, transition:{staggerChildren:0.4}}
+    show:{opacity:1, transition:{staggerChildren:0.3, ease:'easeInOut'}}
   }
 
     const fadeChildContainer = {
