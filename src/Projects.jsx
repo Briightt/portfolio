@@ -53,7 +53,7 @@ export default function Projects ({fadeChildContainer}) {
 
 return (<>
 
-<motion.div className='flex justify-center mb-5 mt-14 overflow-auto' variants = {fadeChildContainer} >
+<motion.div className='flex justify-center mb-5 mt-10 overflow-auto' variants = {fadeChildContainer} >
 <motion.h1 className='flex items-center text-[1.8rem] sm:text-[2.9rem] font-bold mt-10 mb-5 bg-clip-text bg-gradient-to-r text-transparent from-orange-400 to-red-400' 
  variants = {fadeChildContainer} >Projects</motion.h1>
 </motion.div>
@@ -92,6 +92,7 @@ return (<>
 </motion.div>
 
 </>)
+
 
 
 
