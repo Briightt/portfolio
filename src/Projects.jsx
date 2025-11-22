@@ -157,8 +157,8 @@ className='max-w-10 sm:max-w-25 md:max-w-28 lg:max-w-17 2xl:max-w-28 cursor-poin
 </motion.div>
 
 <motion.div className='flex gap-10 justify-center items-center self-center will-change-transform' variants = {fadeChildContainer}>
-{project2imgs.map((item,index) => <img decoding="async" loading='lazy' key = {index} src = {item} onClick={() => selectImg('p2', item)}
- className='max-w-25 sm:max-w-25 md:max-w-40 lg:max-w-30 2xl:max-w-60 py-3 cursor-pointer' variants = {fadeChildContainer} whileHover={{scale:1.2}} ></img>)}
+{project2imgs.map((item,index) => <motion.img decoding="async" loading='lazy' key = {index} src = {item} onClick={() => selectImg('p2', item)}
+ className='max-w-25 sm:max-w-25 md:max-w-40 lg:max-w-30 2xl:max-w-60 py-3 cursor-pointer' whileHover={{scale:1.2}} ></motion.img>)}
 </motion.div>
 
 <h1 className='font-bold text-white text-[2rem] 2xl:self-start leading-7 mt-2'>To-Do list</h1>
@@ -182,3 +182,4 @@ className='max-w-10 sm:max-w-25 md:max-w-28 lg:max-w-17 2xl:max-w-28 cursor-poin
 </>)
 
 }
+
