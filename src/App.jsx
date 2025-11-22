@@ -10,17 +10,13 @@ import Aboutme from './Aboutme'
 import Projects from './Projects'
 import ContactPage from './ContactPage'
 import emailjs from '@emailjs/browser'
+import {useForm} from 'react-hook-form'
 import './App.css'
+import SmoothScroll from './SmoothScroll'
 
 
 function App() {
   
-useEffect(() => {
-  document.title = 'Portfolio'
-} ,
-
-[])
-
 
   const {ref:HomeRef, inView:homeView} = useInView({
     threshold:0.4
@@ -31,7 +27,7 @@ useEffect(() => {
   })
 
    const {ref:ProjectsRef, inView:projectsView} = useInView({
-    threshold:0.26,triggerOnce: true
+    threshold:0.2,triggerOnce: true
   })
 
     const {ref:contactRef, inView:contactView} = useInView({
@@ -42,9 +38,7 @@ useEffect(() => {
     threshold:0.4
   })
 
-    const {ref:slideRef, inView:slideView} = useInView({
-    threshold:0.4
-  })
+
 
   const fadeParentContainer = {
     hidden: {opacity:0},
@@ -68,32 +62,8 @@ useEffect(() => {
 
   const formRef = useRef()
 
-  const [field, setField] = useState({
-    name:'',
-    email:'',
-    message:''
-  })
 
-  const handleField = (field, value) => {
-    setField(prev => ({...prev, [field]: value}))
-  }
-
-
-  const inputRef = [useRef(null),useRef(null),useRef(null)]
-
-  const handleNextRef = (e, nextRef) => {
-  if(e.key === 'Enter') 
-   nextRef.current.focus()
- 
-  }
-
-const formDisabled = () => {
-const {name,email,message} = field
- return !name.trim() || !email.trim() || !message.trim();
-}
-
-  const formSubmit = (e) => {
-  e.preventDefault()
+  const formSubmit = () => {
    emailjs.sendForm(
     import.meta.env.VITE_EMAIL_SERVICE_ID,
   import.meta.env.VITE_EMAIL_TEMPLATE_ID,
@@ -102,7 +72,7 @@ const {name,email,message} = field
   )
   .then(() => {
     window.alert('✅ Message sent successfully!')
-    setField({ name: '', email: '', message: '' })
+    
   })
   .catch((err) => {
     console.error('Error:', err)
@@ -110,11 +80,15 @@ const {name,email,message} = field
   })
 }
 
-  
+const {register,handleSubmit, formState:{errors}} = useForm()
+
+
+
 
   return (
     <>
-<motion.header className="sticky top-0 z-[1000] bg-[#141313] p-3 w-full">
+<SmoothScroll/>
+<motion.header className="fixed top-0 left-0 z-[1000] bg-[#141313] py-3 w-full">
   <motion.nav
     ref={fadeRef}
     variants={fadeParentContainer}
@@ -134,7 +108,7 @@ const {name,email,message} = field
             to={section}
             smooth
             duration={500}
-            offset={section === "AboutMe" ? -200 : 0}
+            offset={section === "AboutMe" ? -200 : 0 || section === "Home" ? -100 : 0}
             className="cursor-pointer hover:text-[#fcaa1185] transition-colors duration-200"
           >
             {section === "AboutMe" ? "About" : section}
@@ -179,8 +153,7 @@ const {name,email,message} = field
 
 <Element name='Contact'>
 <motion.div variants = {slideParentContainer} ref ={contactRef} initial = 'hidden' animate = {contactView ? 'show' : 'hidden'}>
-<ContactPage slideChildContainer = {slideChildContainer} handleField = {handleField} formSubmit = {formSubmit}
- formDisabled = {formDisabled} handleNextRef = {handleNextRef} inputRef = {inputRef} field = {field} setField={setField} formRef = {formRef}/>
+<ContactPage slideChildContainer = {slideChildContainer} register = {register} errors = {errors} handleSubmit = {handleSubmit} formRef={formRef} formSubmit={formSubmit}/>
 </motion.div>
 </Element>
 </div>

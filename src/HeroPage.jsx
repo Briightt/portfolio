@@ -2,13 +2,15 @@
 import {motion} from 'framer-motion'
 import video from './assets/template.mp4'
 import image from './assets/image.webp'
+import { Link } from 'react-scroll'
 
 export default function HeroPage ({slideChildContainer}) {
 
 return (<>
 
 
-<div variants = {slideChildContainer} className="grid grid-rows-1 [grid-template-areas:'video'] will-change-transform will-change-opacity justify-center mb-10" >
+<div variants = {slideChildContainer} className="grid grid-rows-1 [grid-template-areas:'video'] will-change-transform will-change-opacity justify-center 
+mb-10 sm:mt-10 md:mt-0 mt-10 " >
 <video variants = {slideChildContainer} playsInline muted autoPlay loop disablePictureInPicture preload="auto" controls={false} src= {video} className='w-full [grid-area:video] h-auto object-cover
  will-change-transform will-change-opacity' >
 </video>
@@ -17,15 +19,15 @@ className='[grid-area:video] z-[1] flex flex-col lg:flex-row flex-1 items-center
 <motion.div variants = {slideChildContainer} className='flex flex-col gap-2 flex-wrap items-center lg:items-start'>
 <h1 variants = {slideChildContainer}className='text-2xl sm:text-[2.5rem] lg:text-[4rem] xl:text-[5rem] bg-gradient-to-bl from-[#ffa500] to-[#f80000]
  text-transparent bg-clip-text whitespace-nowrap'>Mustafa Abdul Kareem</h1>
-<h1 className='text-[0.9rem] sm:text-base md:text-[1.5rem] lg:text-[2.3rem] xl:text-[3rem] text-[#ffffff] mb-2 sm:mb-5'variants = {slideChildContainer}>Front-End Web Developer Student</h1>
+<h1 className='text-[0.9rem] sm:text-base md:text-[1.5rem] lg:text-[2.3rem] xl:text-[3rem] text-[#ffffff] mb-2 sm:mb-5'variants = {slideChildContainer}>Front-End Web Development Student</h1>
 <motion.div className='flex sm:mb-5 gap-4' variants = {slideChildContainer}>
-  <motion.button whileHover={{scale:1.1}}
+  <Link to = 'Projects' smooth = {true} duration={500}><motion.button whileHover={{scale:1.1}}
    className='text-[#ffffff] border-2 border-orange-300 rounded-2xl p-1 sm:p-2 md:min-w-33 transition-colors duration-200
-    hover:bg-orange-300 cursor-pointer active:bg-orange-950 min-w-18 h-8 sm:text-base text-[0.8rem] sm:min-h-10 sm:min-w-30 flex items-center justify-center'>Projects</motion.button>
-  <motion.button whileHover={{scale:1.1}}
+    hover:bg-orange-300 cursor-pointer active:bg-orange-950 min-w-18 h-8 sm:text-base text-[0.8rem] sm:min-h-10 sm:min-w-30 flex items-center justify-center'>Projects</motion.button></Link>
+ <Link to = 'Contact' smooth = {true} duration={500}><motion.button whileHover={{scale:1.1}}
    className='text-white border-2 border-amber-600 rounded-2xl sm:p-2 sm:min-w-30 
-   transition-colors duration-200 hover:bg-orange-800 active:bg-orange-950 cursor-pointer min-w-18 h-8 sm:min-h-10 sm:text-base text-[0.8rem] p-1 flex items-center justify-center'>
-    Contact</motion.button>
+   transition-colors duration-200 hover:bg-amber-600 active:bg-orange-950 cursor-pointer min-w-18 h-8 sm:min-h-10 sm:text-base text-[0.8rem] p-1 flex items-center justify-center'>
+    Contact</motion.button></Link>
 </motion.div>
 <motion.div variants = {slideChildContainer} className='flex flex-row gap-5 mt-3'>
 <motion.p  whileHover = {{translateY:-10}} transition={{duration:0.1, ease: 'easeInOut'}}
@@ -36,7 +38,7 @@ className='[grid-area:video] z-[1] flex flex-col lg:flex-row flex-1 items-center
 <motion.p className='bg-[#ffffff33] flex items-center justify-center flex-col rounded-2xl
  xl:min-w-70 xl:min-h-20 text-[#ffa500] flex-1 flex-wrap sm:whitespace-nowrap min-w-20 h-10 sm:w-45 sm:h-15' transition={{duration:0.1, ease: 'easeInOut'}}
  whileHover = {{translateY:-10}} ><span  className='xl:text-[1.8rem] sm:text-[1.3rem] text-[1.1rem] font-bold'>10+</span>
-<span  className='text-white xl:text-base sm:text-[0.9rem] text-[0.61rem]'>Projects</span></motion.p>
+<span  className='text-white xl:text-base sm:text-[0.9rem] text-[0.61rem]'> Projects</span></motion.p>
 <motion.p whileHover = {{translateY:-10}} transition={{duration:0.1, ease: 'easeInOut'}}
  className='bg-[#ffffff33] flex items-center justify-center flex-col rounded-2xl xl:w-70 xl:h-20 sm:w-60 sm:h-15 text-[#ffa500] 
   flex-1 flex-wrap sm:whitespace-nowrap min-w-38 h-10'>
