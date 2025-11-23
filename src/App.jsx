@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 import {Link, Element} from 'react-scroll'
-import {motion} from 'framer-motion'
+import {AnimatePresence, motion} from 'framer-motion'
 import github from './assets/github.svg'
 import twitter from './assets/twitter.svg'
 import linkedin from './assets/linkedin.svg'
@@ -16,6 +16,22 @@ import SmoothScroll from './SmoothScroll'
 
 
 function App() {
+
+  const prev = useRef(0);
+  const [scrolled,isScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+   const y = window.scrollY
+   isScrolled(y > prev.current)
+   prev.current = y
+
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+
+  }, [])
   
 
   const {ref:HomeRef, inView:homeView} = useInView({
@@ -35,7 +51,8 @@ function App() {
   })
   
   const {ref:fadeRef, inView:fadeView} = useInView({
-    threshold:0.4
+    threshold:0.4,
+    triggerOnce:true
   })
 
 
@@ -83,12 +100,17 @@ function App() {
 const {register,handleSubmit, formState:{errors}} = useForm()
 
 
-
-
   return (
     <>
 <SmoothScroll/>
-<motion.header className="fixed top-0 left-0 z-[1000] bg-[#141313] py-3 w-full">
+<AnimatePresence>
+<motion.header className={`fixed top-0 left-0 z-[1000] bg-[#141313] py-3 w-full`}
+
+  initial={{ y: 0 }}
+    animate={{ y: scrolled ? -80 : 0 }} 
+    transition={{ type: "spring", stiffness: 120, damping: 18 }}
+  >
+
   <motion.nav
     ref={fadeRef}
     variants={fadeParentContainer}
@@ -96,6 +118,7 @@ const {register,handleSubmit, formState:{errors}} = useForm()
     animate={fadeView ? "show" : "hidden"}
     className="flex justify-center items-center w-full md:justify-evenly sm:ml-0 mx-auto flex-wrap gap-5"
   >
+    
     <div className="flex justify-center items-center gap-4 text-[#ffa500] font-semibold text-sm md:text-base">
       {["Home", "AboutMe", "Projects", "Contact"].map((section) => (
         <motion.span
@@ -129,6 +152,7 @@ const {register,handleSubmit, formState:{errors}} = useForm()
     </div>
   </motion.nav>
 </motion.header>
+</AnimatePresence>
 
 
 <Element name = 'Home'>
