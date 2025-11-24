@@ -5,7 +5,7 @@ export default function SmoothScroll() {
   useEffect(() => {
         const lenis = new Lenis({
       duration: 0.28, 
-      easing: (t) => t, 
+      easing: (t) => t * (2-t), 
       smoothWheel: false,
       wheelMultiplier:1.31,
       lerp:0.1,
@@ -26,4 +26,5 @@ export default function SmoothScroll() {
   return null;
 
 }
+
 
