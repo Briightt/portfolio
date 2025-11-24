@@ -4,11 +4,11 @@ import Lenis from "@studio-freight/lenis";
 export default function SmoothScroll() {
   useEffect(() => {
         const lenis = new Lenis({
-      duration: 0.5, 
+      duration: 0.48, 
       easing: (t) => t * (2-t), 
       smoothWheel: false,
       wheelMultiplier:1.31,
-      lerp:0.1,
+      lerp:0.095,
       touchMultiplier: 1.2,
     });
 
@@ -26,6 +26,7 @@ export default function SmoothScroll() {
   return null;
 
 }
+
 
 
 
